@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.menu.MainMenuActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_game"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_name_player"
+        style="@style/Text.20.White"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_greeting_choose_mode"
+        android:layout_marginRight="@dimen/_16sdp"
+        android:layout_marginLeft="@dimen/_16sdp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.10" />
+
+    <ImageView
+        android:id="@+id/iv_player_vs_computer"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:src="@drawable/ic_computer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_name_player" />
+
+    <TextView
+        android:id="@+id/tv_player_vs_computer"
+        style="@style/Text.16.Blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:text="@string/player_vs_computer"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@id/iv_player_vs_computer"
+        app:layout_constraintStart_toStartOf="@id/iv_player_vs_computer"
+        app:layout_constraintTop_toBottomOf="@id/iv_player_vs_computer" />
+
+    <ImageView
+        android:id="@+id/iv_player_vs_player"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:src="@drawable/ic_joystick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_player_vs_computer" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/player_vs_player"
+        style="@style/Text.16.Blue"
+        android:textAlignment="center"
+        android:layout_marginTop="@dimen/_8sdp"
+        app:layout_constraintEnd_toEndOf="@id/iv_player_vs_player"
+        app:layout_constraintStart_toStartOf="@id/iv_player_vs_player"
+        app:layout_constraintTop_toBottomOf="@id/iv_player_vs_player" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
