@@ -224,9 +224,9 @@ class GameActivity : AppCompatActivity(), GameActivityListener {
 
     private fun showOptionSuitPlayer(player: SuitPlayer, isVisible: Boolean) {
         if (player == SuitPlayer.PLAYERONE) {
-            binding.llLeft.isVisible = isVisible
+            binding.llTop.isVisible = isVisible
         } else {
-            binding.llRight.isVisible = isVisible
+            binding.llBottom .isVisible = isVisible
         }
     }
 

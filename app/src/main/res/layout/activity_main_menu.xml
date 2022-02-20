@@ -7,71 +7,98 @@
     tools:context=".presentation.menu.MainMenuActivity">
 
     <ImageView
+        android:id="@+id/imageView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/bg_game"
         android:scaleType="centerCrop"
-        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/bg_game"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/tv_name_player"
         style="@style/Text.20.White"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/text_greeting_choose_mode"
-        android:layout_marginRight="@dimen/_16sdp"
         android:layout_marginLeft="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:layout_marginRight="@dimen/_16sdp"
+        android:text="@string/text_greeting_choose_mode"
         android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/ll_player_vs_computer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name_player"
+        app:layout_constraintBottom_toTopOf="@id/tv_or">
+
+        <TextView
+            android:id="@+id/tv_player_vs_computer"
+            style="@style/Text.16.Blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:text="@string/player_vs_computer"
+            android:textAlignment="center" />
+
+        <ImageView
+            android:id="@+id/iv_player_vs_computer"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="@dimen/_90sdp"
+            android:src="@drawable/ic_computer" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_or"
+        style="@style/Text.24.White"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_or"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_player_vs_computer"
+        app:layout_constraintBottom_toTopOf="@id/ll_player_vs_player"/>
+
+    <LinearLayout
+        android:id="@+id/ll_player_vs_player"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.10" />
+        app:layout_constraintTop_toBottomOf="@id/tv_or">
 
-    <ImageView
-        android:id="@+id/iv_player_vs_computer"
-        android:layout_width="@dimen/_100sdp"
-        android:layout_height="@dimen/_100sdp"
-        android:layout_marginStart="@dimen/_16sdp"
-        android:layout_marginTop="@dimen/_24sdp"
-        android:src="@drawable/ic_computer"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_name_player" />
+        <ImageView
+            android:id="@+id/iv_player_vs_player"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="@dimen/_90sdp"
+            android:src="@drawable/ic_joystick" />
 
-    <TextView
-        android:id="@+id/tv_player_vs_computer"
-        style="@style/Text.16.Blue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_8sdp"
-        android:text="@string/player_vs_computer"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="@id/iv_player_vs_computer"
-        app:layout_constraintStart_toStartOf="@id/iv_player_vs_computer"
-        app:layout_constraintTop_toBottomOf="@id/iv_player_vs_computer" />
+        <TextView
+            android:id="@+id/tv_player_vs_player"
+            style="@style/Text.16.Blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_24sdp"
+            android:text="@string/player_vs_player" />
 
-    <ImageView
-        android:id="@+id/iv_player_vs_player"
-        android:layout_width="@dimen/_100sdp"
-        android:layout_height="@dimen/_100sdp"
-        android:layout_marginEnd="@dimen/_16sdp"
-        android:src="@drawable/ic_joystick"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_player_vs_computer" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/player_vs_player"
-        style="@style/Text.16.Blue"
-        android:textAlignment="center"
-        android:layout_marginTop="@dimen/_8sdp"
-        app:layout_constraintEnd_toEndOf="@id/iv_player_vs_player"
-        app:layout_constraintStart_toStartOf="@id/iv_player_vs_player"
-        app:layout_constraintTop_toBottomOf="@id/iv_player_vs_player" />
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

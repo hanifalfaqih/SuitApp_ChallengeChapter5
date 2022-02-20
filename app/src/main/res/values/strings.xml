@@ -6,8 +6,8 @@
     <string name="text_input_name_before_play">Input your name before play the game!</string>
     <string name="text_enter_the_game">Enter the game</string>
     <string name="text_greeting_choose_mode">Hi, %s\nChoose your game mode !</string>
-    <string name="player_vs_computer">Player\nVS\nComputer</string>
-    <string name="player_vs_player">Player\nVS\nPlayer</string>
+    <string name="player_vs_computer">Player VS Computer</string>
+    <string name="player_vs_player">Player VS Player</string>
     <string name="please_enter_your_name">Please enter your name!</string>
     <string name="enter_the_game">Enter the game</string>
     <string name="text_player_win">Player Win!</string>
@@ -26,4 +26,5 @@
     <string name="player_two_choose_rock">Player 2 choose Rock</string>
     <string name="player_two_choose_paper">Player 2 choose Paper</string>
     <string name="player_two_choose_scissor">Player 2 choose Scissor</string>
+    <string name="text_or">OR</string>
 </resources>
